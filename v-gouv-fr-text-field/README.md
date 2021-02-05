@@ -1,11 +1,14 @@
 # v-gouv-fr-text-field
 Textfield design system État
 
+
 ## Installation
 **Le composant n'est pas disponible sur le registry NPM public**
 
 `yarn add @vue-gouv-fr/v-gouv-fr-text-field`
     
+### Requiert
+- le projet hôte doit avoir une dépendance NPM à `@gouvfr/inputs`
 
 ### Utilisation
     import VGouvFrTextField from "@vue-gouv-fr/v-gouv-fr-text-field"
