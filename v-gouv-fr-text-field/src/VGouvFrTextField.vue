@@ -1,8 +1,8 @@
 <template>
   <div class="v-gouv-fr-text-field">
-    <div :class="`rf-input-group ` + (error && !valid ? 'rf-input-group--error' : '') + (valid && !error ? 'rf-input-group--valid' : '')" :data-rf-theme="theme">
-      <label class="rf-label" :for="id" :data-rf-theme="theme">{{ label }}</label>
-      <p v-if="help" class="rf-hint-text" :id="id+`-hint-desc-hint`" :data-rf-theme="theme">{{ help }}</p>
+    <div :class="`rf-input-group ` + (error && !valid ? 'rf-input-group--error' : '') + (valid && !error ? 'rf-input-group--valid' : '')">
+      <label class="rf-label" :for="id">{{ label }}</label>
+      <p v-if="help" class="rf-hint-text" :id="id+`-hint-desc-hint`">{{ help }}</p>
       <input 
         :id="id" 
         :name="name"
@@ -13,12 +13,11 @@
         @change="valueChanged"
         @keydown="keydown"
         :disabled="disabled"
-        :data-rf-theme="theme"
         >
-        <p :id="id+`-error-desc-error`" class="rf-error-text" v-if="error && !valid" :data-rf-theme="theme">
+        <p :id="id+`-error-desc-error`" class="rf-error-text" v-if="error && !valid">
             {{ error }}
         </p>
-        <p :id="id+`-error-desc-valid`" class="rf-valid-text" v-else-if="!error && valid" :data-rf-theme="theme">
+        <p :id="id+`-error-desc-valid`" class="rf-valid-text" v-else-if="!error && valid">
             {{ valid }}
         </p>
       </div>
@@ -70,10 +69,6 @@
       placeholder:{
         type: String,
         default: ''
-      },
-      theme: {
-        type: String,
-        default: 'auto',
       },
       valid:{
         type: String,
