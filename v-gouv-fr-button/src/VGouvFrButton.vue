@@ -2,6 +2,7 @@
   <div class="v-gouv-fr-button">
     <button 
       :class="`rf-btn ` + typeClass + sizeClass + iconClass" 
+      :data-rf-theme="theme"
       :disabled="disabled"
       :title="iconOnly ? label : undefined"
       @click="pushClick">
@@ -62,6 +63,10 @@
       large: {
         type: Boolean,
         default: false,
+      },
+      theme: {
+        type: String,
+        default: 'auto',
       }
     },
     computed: { 

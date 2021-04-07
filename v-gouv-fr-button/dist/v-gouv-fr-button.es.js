@@ -45,6 +45,10 @@ var script = {
     large: {
       type: Boolean,
       default: false
+    },
+    theme: {
+      type: String,
+      default: 'auto'
     }
   },
   computed: {
@@ -169,7 +173,7 @@ var normalizeComponent_1 = normalizeComponent;
 const __vue_script__ = script;
 
 /* template */
-var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"v-gouv-fr-button"},[_c('button',{class:"rf-btn " + _vm.typeClass + _vm.sizeClass + _vm.iconClass,attrs:{"disabled":_vm.disabled,"title":_vm.iconOnly ? _vm.label : undefined},on:{"click":_vm.pushClick}},[(_vm.iconOnly)?_c('span',{staticClass:"sr-only"},[_vm._v(_vm._s(_vm.label))]):[_vm._v("\n      "+_vm._s(_vm.label)+"\n    ")]],2)])};
+var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"v-gouv-fr-button"},[_c('button',{class:"rf-btn " + _vm.typeClass + _vm.sizeClass + _vm.iconClass,attrs:{"data-rf-theme":_vm.theme,"disabled":_vm.disabled,"title":_vm.iconOnly ? _vm.label : undefined},on:{"click":_vm.pushClick}},[(_vm.iconOnly)?_c('span',{staticClass:"sr-only"},[_vm._v(_vm._s(_vm.label))]):[_vm._v("\n      "+_vm._s(_vm.label)+"\n    ")]],2)])};
 var __vue_staticRenderFns__ = [];
 
   /* style */

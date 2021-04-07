@@ -1,6 +1,6 @@
 {
   "name": "@vue-gouv-fr/v-gouv-fr-text-field",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "description": "Composant TextField du design system de l'État",
   "scripts": {
     "build": "bili --name v-gouv-fr-text-field --format cjs,es --plugin vue",

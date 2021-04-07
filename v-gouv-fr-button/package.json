@@ -1,6 +1,6 @@
 {
   "name": "@vue-gouv-fr/v-gouv-fr-button",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "description": "Composant Button du Design System d'État",
   "scripts": {
     "build": "bili --name v-gouv-fr-button --format cjs,es --plugin vue",
