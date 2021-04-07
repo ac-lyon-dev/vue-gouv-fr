@@ -25,11 +25,15 @@
   </div>
 </template>
 <script>
-  import "@gouvfr/core/dist/css/core.min.css"
-  import "@gouvfr/forms/dist/css/forms.min.css"
-  import "@gouvfr/inputs/dist/css/inputs.min.css"
-  import "@gouvfr/schemes/dist/css/schemes.min.css"
-  import "@gouvfr/schemes/dist/js/schemes.min.js"
+  import "@gouvfr/dsfr/dist/css/core.min.css"
+  import "@gouvfr/dsfr/dist/js/core.nomodule.min.js"
+
+  import "@gouvfr/dsfr/dist/css/forms.min.css"
+
+  import "@gouvfr/dsfr/dist/css/inputs.min.css"
+
+  import "@gouvfr/dsfr/dist/css/schemes.min.css"
+  import "@gouvfr/dsfr/dist/js/schemes.nomodule.min.js"
 
   export default {
     name: 'v-gouv-fr-text-field',

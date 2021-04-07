@@ -8,7 +8,7 @@ Textfield design system État
 `yarn add @vue-gouv-fr/v-gouv-fr-text-field`
     
 ### Requiert
-- le projet hôte doit avoir une dépendance NPM à `@gouvfr/inputs`
+- le projet hôte doit avoir une dépendance NPM à `@gouvfr/dsfr`
 
 ### Utilisation
     import VGouvFrTextField from "@vue-gouv-fr/v-gouv-fr-text-field"

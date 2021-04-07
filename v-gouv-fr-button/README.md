@@ -7,7 +7,7 @@ Button Design System État
 `yarn add @vue-gouv-fr/v-gouv-fr-button`
 
 ### Requiert
-- le projet hôte doit avoir une dépendance NPM à `@gouvfr/buttons`
+- le projet hôte doit avoir une dépendance NPM à `@gouvfr/dsfr`
 
 ### Utilisation
     import VGouvFrButton from "@vue-gouv-fr/v-gouv-fr-button"

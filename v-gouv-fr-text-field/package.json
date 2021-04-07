@@ -1,6 +1,6 @@
 {
   "name": "@vue-gouv-fr/v-gouv-fr-text-field",
-  "version": "0.5.3",
+  "version": "0.6.3",
   "description": "Composant TextField du design system de l'État",
   "scripts": {
     "build": "bili --name v-gouv-fr-text-field --format cjs,es --plugin vue",
@@ -11,7 +11,7 @@
   "author": "Loïc Salanon <loic.salanon@ac-lyon.fr>",
   "license": "MIT",
   "devDependencies": {
-    "@gouvfr/inputs": "^0.5.3",
+    "@gouvfr/dsfr": "^0.6.0",
     "bili": "^3.4.2",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
@@ -20,7 +20,7 @@
     "vue-template-compiler": "^2.6.11"
   },
   "peerDependencies": {
-    "@gouvfr/inputs": "^0.5.3",
+    "@gouvfr/dsfr": "^0.6.0",
     "vue": "^2.6.11"
   }
 }

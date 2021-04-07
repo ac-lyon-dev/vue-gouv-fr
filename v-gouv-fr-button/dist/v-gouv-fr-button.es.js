@@ -1,8 +1,10 @@
-import '@gouvfr/core/dist/css/core.min.css';
-import '@gouvfr/links/dist/css/links.min.css';
-import '@gouvfr/buttons/dist/css/buttons.min.css';
-import '@gouvfr/schemes/dist/css/schemes.min.css';
-import '@gouvfr/schemes/dist/js/schemes.min.js';
+import '@gouvfr/dsfr/dist/css/core.min.css';
+import '@gouvfr/dsfr/dist/js/core.nomodule.min.js';
+import '@gouvfr/dsfr/dist/css/links.min.css';
+import '@gouvfr/dsfr/dist/css/buttons.min.css';
+import '@gouvfr/dsfr/dist/js/buttons.nomodule.min.js';
+import '@gouvfr/dsfr/dist/css/schemes.min.css';
+import '@gouvfr/dsfr/dist/js/schemes.nomodule.min.js';
 
 //
 var script = {

@@ -1,10 +1,11 @@
 'use strict';
 
-require('@gouvfr/core/dist/css/core.min.css');
-require('@gouvfr/forms/dist/css/forms.min.css');
-require('@gouvfr/inputs/dist/css/inputs.min.css');
-require('@gouvfr/schemes/dist/css/schemes.min.css');
-require('@gouvfr/schemes/dist/js/schemes.min.js');
+require('@gouvfr/dsfr/dist/css/core.min.css');
+require('@gouvfr/dsfr/dist/js/core.nomodule.min.js');
+require('@gouvfr/dsfr/dist/css/forms.min.css');
+require('@gouvfr/dsfr/dist/css/inputs.min.css');
+require('@gouvfr/dsfr/dist/css/schemes.min.css');
+require('@gouvfr/dsfr/dist/js/schemes.nomodule.min.js');
 
 //
 var script = {
