@@ -43,10 +43,6 @@ var script = {
       type: String,
       default: ''
     },
-    theme: {
-      type: String,
-      default: 'auto'
-    },
     valid: {
       type: String,
       default: ''
@@ -160,7 +156,7 @@ var normalizeComponent_1 = normalizeComponent;
 const __vue_script__ = script;
 
 /* template */
-var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"v-gouv-fr-text-field"},[_c('div',{class:"rf-input-group " + (_vm.error && !_vm.valid ? 'rf-input-group--error' : '') + (_vm.valid && !_vm.error ? 'rf-input-group--valid' : ''),attrs:{"data-rf-theme":_vm.theme}},[_c('label',{staticClass:"rf-label",attrs:{"for":_vm.id,"data-rf-theme":_vm.theme}},[_vm._v(_vm._s(_vm.label))]),_vm._v(" "),(_vm.help)?_c('p',{staticClass:"rf-hint-text",attrs:{"id":_vm.id+"-hint-desc-hint","data-rf-theme":_vm.theme}},[_vm._v(_vm._s(_vm.help))]):_vm._e(),_vm._v(" "),_c('input',{class:"rf-input " + (_vm.error && !_vm.valid ? 'rf-input--error' : '') + (_vm.valid && !_vm.error ? 'rf-input--valid' : ''),attrs:{"id":_vm.id,"name":_vm.name,"type":_vm.password ? 'password' : 'text',"placeholder":_vm.placeholder,"disabled":_vm.disabled,"data-rf-theme":_vm.theme},domProps:{"value":_vm.value},on:{"change":_vm.valueChanged,"keydown":_vm.keydown}}),_vm._v(" "),(_vm.error && !_vm.valid)?_c('p',{staticClass:"rf-error-text",attrs:{"id":_vm.id+"-error-desc-error","data-rf-theme":_vm.theme}},[_vm._v("\n          "+_vm._s(_vm.error)+"\n      ")]):(!_vm.error && _vm.valid)?_c('p',{staticClass:"rf-valid-text",attrs:{"id":_vm.id+"-error-desc-valid","data-rf-theme":_vm.theme}},[_vm._v("\n          "+_vm._s(_vm.valid)+"\n      ")]):_vm._e()])])};
+var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"v-gouv-fr-text-field"},[_c('div',{class:"fr-input-group " + (_vm.error && !_vm.valid ? 'fr-input-group--error' : '') + (_vm.valid && !_vm.error ? 'fr-input-group--valid' : '')},[_c('label',{staticClass:"fr-label",attrs:{"for":_vm.id}},[_vm._v(_vm._s(_vm.label))]),_vm._v(" "),(_vm.help)?_c('p',{staticClass:"fr-hint-text",attrs:{"id":_vm.id+"-hint-desc-hint"}},[_vm._v(_vm._s(_vm.help))]):_vm._e(),_vm._v(" "),_c('input',{class:"fr-input " + (_vm.error && !_vm.valid ? 'fr-input--error' : '') + (_vm.valid && !_vm.error ? 'fr-input--valid' : ''),attrs:{"id":_vm.id,"name":_vm.name,"type":_vm.password ? 'password' : 'text',"placeholder":_vm.placeholder,"disabled":_vm.disabled},domProps:{"value":_vm.value},on:{"change":_vm.valueChanged,"keydown":_vm.keydown}}),_vm._v(" "),(_vm.error && !_vm.valid)?_c('p',{staticClass:"fr-error-text",attrs:{"id":_vm.id+"-error-desc-error"}},[_vm._v("\n          "+_vm._s(_vm.error)+"\n      ")]):(!_vm.error && _vm.valid)?_c('p',{staticClass:"fr-valid-text",attrs:{"id":_vm.id+"-error-desc-valid"}},[_vm._v("\n          "+_vm._s(_vm.valid)+"\n      ")]):_vm._e()])])};
 var __vue_staticRenderFns__ = [];
 
   /* style */

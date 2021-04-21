@@ -1,12 +1,12 @@
 <template>
   <div class="v-gouv-fr-text-field">
-    <div :class="`rf-input-group ` + (error && !valid ? 'rf-input-group--error' : '') + (valid && !error ? 'rf-input-group--valid' : '')">
-      <label class="rf-label" :for="id">{{ label }}</label>
-      <p v-if="help" class="rf-hint-text" :id="id+`-hint-desc-hint`">{{ help }}</p>
+    <div :class="`fr-input-group ` + (error && !valid ? 'fr-input-group--error' : '') + (valid && !error ? 'fr-input-group--valid' : '')">
+      <label class="fr-label" :for="id">{{ label }}</label>
+      <p v-if="help" class="fr-hint-text" :id="id+`-hint-desc-hint`">{{ help }}</p>
       <input 
         :id="id" 
         :name="name"
-        :class="`rf-input ` + (error && !valid ? 'rf-input--error' : '') + (valid && !error ? 'rf-input--valid' : '')"
+        :class="`fr-input ` + (error && !valid ? 'fr-input--error' : '') + (valid && !error ? 'fr-input--valid' : '')"
         :type="password ? 'password' : 'text'"
         :placeholder="placeholder" 
         :value="value" 
@@ -14,10 +14,10 @@
         @keydown="keydown"
         :disabled="disabled"
         >
-        <p :id="id+`-error-desc-error`" class="rf-error-text" v-if="error && !valid">
+        <p :id="id+`-error-desc-error`" class="fr-error-text" v-if="error && !valid">
             {{ error }}
         </p>
-        <p :id="id+`-error-desc-valid`" class="rf-valid-text" v-else-if="!error && valid">
+        <p :id="id+`-error-desc-valid`" class="fr-valid-text" v-else-if="!error && valid">
             {{ valid }}
         </p>
       </div>

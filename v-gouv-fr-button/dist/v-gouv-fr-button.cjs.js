@@ -47,33 +47,29 @@ var script = {
     large: {
       type: Boolean,
       default: false
-    },
-    theme: {
-      type: String,
-      default: 'auto'
     }
   },
   computed: {
     //gets type class (primary or secondary)
     typeClass: function typeClass() {
       if (this.secondary && !this.primary) {
-        return 'rf-btn--secondary '; //trailing space for next classes
+        return 'fr-btn--secondary '; //trailing space for next classes
       }
 
       return '';
     },
     //gets size class (small, medium or large)
     sizeClass: function sizeClass() {
-      if (this.small) return 'rf-btn--sm ';else if (this.large) return 'rf-btn--lg ';
+      if (this.small) return 'fr-btn--sm ';else if (this.large) return 'fr-btn--lg ';
       return '';
     },
     //gets icon class
     iconClass: function iconClass() {
       if (this.icon === '' || this.iconPosition !== 'left' && this.iconPosition !== 'right') return '';
-      var computedIconClass = 'rf-fi-' + this.icon;
+      var computedIconClass = 'fr-fi-' + this.icon;
 
       if (!this.iconOnly) {
-        computedIconClass += ' rf-btn--icon-' + this.iconPosition;
+        computedIconClass += ' fr-btn--icon-' + this.iconPosition;
       }
 
       return computedIconClass;
@@ -175,7 +171,7 @@ var normalizeComponent_1 = normalizeComponent;
 const __vue_script__ = script;
 
 /* template */
-var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"v-gouv-fr-button"},[_c('button',{class:"rf-btn " + _vm.typeClass + _vm.sizeClass + _vm.iconClass,attrs:{"data-rf-theme":_vm.theme,"disabled":_vm.disabled,"title":_vm.iconOnly ? _vm.label : undefined},on:{"click":_vm.pushClick}},[(_vm.iconOnly)?_c('span',{staticClass:"sr-only"},[_vm._v(_vm._s(_vm.label))]):[_vm._v("\n      "+_vm._s(_vm.label)+"\n    ")]],2)])};
+var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"v-gouv-fr-button"},[_c('button',{class:"fr-btn " + _vm.typeClass + _vm.sizeClass + _vm.iconClass,attrs:{"disabled":_vm.disabled,"title":_vm.iconOnly ? _vm.label : undefined},on:{"click":_vm.pushClick}},[(_vm.iconOnly)?_c('span',{staticClass:"sr-only"},[_vm._v(_vm._s(_vm.label))]):[_vm._v("\n      "+_vm._s(_vm.label)+"\n    ")]],2)])};
 var __vue_staticRenderFns__ = [];
 
   /* style */
