@@ -27,13 +27,16 @@
           </ul>
         </div>
       </div>
-      <div class="fr-footer__bottom" v-if="bottomLinks.length > 0 || !hideLicense">
+      <div class="fr-footer__bottom" v-if="bottomLinks.length > 0 || !hideLicense || displaySetting">
         <ul class="fr-footer__bottom-list" v-if="bottomLinks.length > 0 ">
           <template v-for="(link, index) in bottomLinks">
             <li class="fr-footer__bottom-item" :key="`footerbottomlink`+index">
               <a class="fr-footer__bottom-link" :href="link.href">{{ link.title }}</a>
             </li>
           </template>
+          <li class="fr-footer__bottom-item" v-if="displaySetting">
+            <button class="fr-footer__bottom-link fr-fi-theme-fill fr-link--icon-left" aria-controls="fr-theme-modal" data-fr-opened="false">Paramètres d'affichage</button>
+          </li>
         </ul>
         <div class="fr-footer__bottom-copy" v-if="!hideLicense">
           <p>
@@ -81,7 +84,11 @@ export default {
     hideLicense: {
       type: Boolean,
       default: false
-    }
+    },
+    displaySetting: {
+      type: Boolean,
+      default: false,
+    },
   },
   data: () => ({}),
   methods: {},

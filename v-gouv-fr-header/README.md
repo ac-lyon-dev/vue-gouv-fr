@@ -67,4 +67,5 @@ Header design system État
 - **top-links** : *Array* — Liens mis en avant
 - **menu-links** : *Array* — Liens directs menus
 - **search-enabled** : *Boolean* — active/affiche le champ de recherche
+- **display-setting** : *Boolean* — active/affiche le bouton paramètre d'affichage
 - *v-model* :  variable texte de  recherche en entrée/sortie
