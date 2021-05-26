@@ -21,7 +21,7 @@
                   :alt="imageOperateur.alt || `Image opérateur`"
                 />
               </div>
-              <div class="fr-header__navbar">
+              <div class="fr-header__navbar" v-if="searchEnabled || topLinks.length > 0 || menuLinks > 0">
                 <button
                   class="fr-btn--search fr-btn"
                   data-fr-opened="false"
