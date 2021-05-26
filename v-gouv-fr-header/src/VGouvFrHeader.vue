@@ -23,7 +23,7 @@
               </div>
               <div
                 class="fr-header__navbar"
-                v-if="searchEnabled || topLinks.length > 0 || menuLinks > 0"
+                v-if="searchEnabled || topLinks.length > 0 || menuLinks > 0 || displaySetting"
               >
                 <button
                   class="fr-btn--search fr-btn"
@@ -151,67 +151,6 @@
         </nav>
       </div>
     </div>
-    <dialog
-      v-if="displaySetting"
-      id="fr-theme-modal"
-      class="fr-modal"
-      role="dialog"
-      aria-labelledby="fr-theme-modal-title"
-    >
-      <div class="fr-container fr-container--fluid fr-container-md">
-        <div class="fr-grid-row fr-grid-row--center">
-          <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
-            <div class="fr-modal__body">
-              <div class="fr-modal__header">
-                <button
-                  class="fr-link--close fr-link"
-                  aria-controls="fr-theme-modal"
-                >
-                  Fermer
-                </button>
-              </div>
-              <div class="fr-modal__content">
-                <h1 id="fr-theme-modal-title" class="fr-modal__title">
-                  Paramètres d’affichage
-                </h1>
-                <div id="fr-switch-theme" class="fr-form-group fr-switch-theme">
-                  <fieldset class="fr-fieldset">
-                    <legend class="fr-fieldset__legend fr-text--regular">
-                      Choisissez un thème pour personnaliser l’apparence du
-                      site.
-                    </legend>
-                    <div class="fr-fieldset__content">
-                      <div class="fr-radio-group fr-radio-rich">
-                        <input
-                          type="radio"
-                          id="fr-radios-theme-light"
-                          name="fr-radios-theme"
-                          value="light"
-                        />
-                        <label class="fr-label" for="fr-radios-theme-light"
-                          >Thème clair
-                        </label>
-                      </div>
-                      <div class="fr-radio-group fr-radio-rich">
-                        <input
-                          type="radio"
-                          id="fr-radios-theme-dark"
-                          name="fr-radios-theme"
-                          value="dark"
-                        />
-                        <label class="fr-label" for="fr-radios-theme-dark"
-                          >Thème sombre
-                        </label>
-                      </div>
-                    </div>
-                  </fieldset>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </dialog>
   </header>
 </template>
 <script>
