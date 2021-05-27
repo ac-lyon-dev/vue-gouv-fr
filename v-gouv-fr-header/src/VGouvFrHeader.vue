@@ -46,7 +46,7 @@
               </div>
             </div>
             <div class="fr-header__service" v-if="nameSite !== null">
-              <a href="/" :title="`Accueil - ` + nameSite">
+              <a :href="homeLink" :title="`Accueil - ` + nameSite">
                 <p class="fr-header__service-title">{{ nameSite }}</p>
               </a>
               <p class="fr-header__service-tagline">
@@ -165,6 +165,10 @@ export default {
       default: () => {
         return ["République", "Française"];
       },
+    },
+    homeLink: {
+      type: String,
+      default: "/"
     },
     nameSite: {
       type: String,
