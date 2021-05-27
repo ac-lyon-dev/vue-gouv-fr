@@ -49,6 +49,7 @@ Footer Design System État
       ]"/>
 
 ### Attributs 
+- **home-link** : *String* — Lien vers la page d'accueil, valeur par défaut : "/"
 - **bloc-marque** : *Array* — Bloc marque : une valeur par ligne
 - **description** : *String* — description
 - **links** : *Array* — Liens références

@@ -1,6 +1,6 @@
 {
   "name": "@vue-gouv-fr/v-gouv-fr-footer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Composant Footer du Design System d'État",
   "scripts": {
     "build": "bili --name v-gouv-fr-footer --format cjs,es --plugin vue",

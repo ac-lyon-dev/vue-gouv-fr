@@ -3,7 +3,7 @@
     <div class="fr-container">
       <div class="fr-footer__body">
         <div class="fr-footer__brand fr-enlarge-link">
-          <a href="/" title="Retour à l’accueil">
+          <a :href="homeLink" title="Retour à l’accueil">
             <p class="fr-logo">
               <template v-for="(val, index) in blocMarque">
                 <br :key="`bm-br`+index" v-if="index > 0"/>
@@ -64,6 +64,10 @@ export default {
       default: () => {
         return ["République", "Française"];
       }
+    },
+    homeLink: {
+      type: String,
+      default: "/"
     },
     description:{
       type: String,
