@@ -124,7 +124,7 @@
       class="fr-header__menu fr-modal"
       id="modal-870"
       aria-labelledby="button-871"
-      v-if="menuLinks.length > 0 || topLinks.length > 0"
+      v-if="menuLinks.length > 0 || topLinks.length > 0 || displaySetting"
     >
       <div class="fr-container">
         <button class="fr-link--close fr-link" aria-controls="modal-870">
