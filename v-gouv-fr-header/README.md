@@ -60,6 +60,7 @@ Header design system État
       />
 
 ### Attributs 
+- **home-link** : *String* — Lien vers la page d'accueil, valeur par défaut : "/"
 - **bloc-marque** : *Array* — Bloc marque : une valeur par ligne
 - **name-site** : *String* — Nom du service/site
 - **desc-site** : *String* — Description du service

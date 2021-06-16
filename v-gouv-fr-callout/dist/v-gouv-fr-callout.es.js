@@ -1,49 +1,40 @@
-import '@gouvfr/dsfr/dist/css/dsfr.min.css';
-import '@gouvfr/dsfr/dist/js/dsfr.nomodule.min.js';
+import '@gouvfr/dsfr/dist/css/core.min.css';
+import '@gouvfr/dsfr/dist/js/core.nomodule.min.js';
+import '@gouvfr/dsfr/dist/css/callouts.min.css';
+import '@gouvfr/dsfr/dist/css/buttons.min.css';
+import '@gouvfr/dsfr/dist/js/buttons.nomodule.min.js';
+import '@gouvfr/dsfr/dist/css/schemes.min.css';
+import '@gouvfr/dsfr/dist/js/schemes.nomodule.min.js';
 
 //
 var script = {
-  name: "v-gouv-fr-footer",
+  name: "v-gouv-fr-callout",
   props: {
-    blocMarque: {
-      type: Array,
-      default: function _default() {
-        return ["République", "Française"];
-      }
-    },
-    homeLink: {
+    title: {
       type: String,
-      default: "/"
+      default: "Titre"
     },
     description: {
       type: String,
+      default: "Description"
+    },
+    icon: {
+      type: String,
       default: null
     },
-    links: {
-      type: Array,
-      default: function _default() {
-        return [];
-      }
-    },
-    bottomLinks: {
-      type: Array,
-      default: function _default() {
-        return [];
-      }
-    },
-    hideLicense: {
-      type: Boolean,
-      default: false
-    },
-    displaySetting: {
-      type: Boolean,
-      default: false
+    buttonTitle: {
+      type: String,
+      default: null
     }
   },
   data: function data() {
     return {};
   },
-  methods: {}
+  methods: {
+    pushClick: function pushClick(e) {
+      this.$emit('click', e);
+    }
+  }
 };
 
 function normalizeComponent(template, style, script, scopeId, isFunctionalTemplate, moduleIdentifier
@@ -135,8 +126,8 @@ var normalizeComponent_1 = normalizeComponent;
 const __vue_script__ = script;
 
 /* template */
-var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('footer',{staticClass:"v-gouv-fr-footer fr-footer",attrs:{"role":"contentinfo","id":"footer"}},[_c('div',{staticClass:"fr-container"},[_c('div',{staticClass:"fr-footer__body"},[_c('div',{staticClass:"fr-footer__brand fr-enlarge-link"},[_c('a',{attrs:{"href":_vm.homeLink,"title":"Retour à l’accueil"}},[_c('p',{staticClass:"fr-logo"},[_vm._l((_vm.blocMarque),function(val,index){return [(index > 0)?_c('br',{key:"bm-br"+index}):_vm._e(),_vm._v(" "),_c('span',{key:"blocmarque"+index},[_vm._v(_vm._s(val))])]})],2)])]),_vm._v(" "),_c('div',{staticClass:"fr-footer__content"},[(_vm.description !== null)?_c('p',{staticClass:"fr-footer__content-desc"},[_vm._v(_vm._s(_vm.description))]):_vm._e(),_vm._v(" "),(_vm.links.length > 0)?_c('ul',{staticClass:"fr-footer__content-list"},[_vm._l((_vm.links),function(link,index){return [(index < 4)?_c('li',{key:"footerlink"+index,staticClass:"fr-footer__content-item"},[_c('a',{staticClass:"fr-footer__content-link",attrs:{"href":link.href}},[_vm._v(_vm._s(link.title))])]):_vm._e()]})],2):_vm._e()])]),_vm._v(" "),(_vm.bottomLinks.length > 0 || !_vm.hideLicense || _vm.displaySetting)?_c('div',{staticClass:"fr-footer__bottom"},[(_vm.bottomLinks.length > 0 )?_c('ul',{staticClass:"fr-footer__bottom-list"},[_vm._l((_vm.bottomLinks),function(link,index){return [_c('li',{key:"footerbottomlink"+index,staticClass:"fr-footer__bottom-item"},[_c('a',{staticClass:"fr-footer__bottom-link",attrs:{"href":link.href}},[_vm._v(_vm._s(link.title))])])]}),_vm._v(" "),(_vm.displaySetting)?_c('li',{staticClass:"fr-footer__bottom-item"},[_c('button',{staticClass:"fr-footer__bottom-link fr-fi-theme-fill fr-link--icon-left",attrs:{"aria-controls":"fr-theme-modal","data-fr-opened":"false"}},[_vm._v("Paramètres d'affichage")])]):_vm._e()],2):_vm._e(),_vm._v(" "),(!_vm.hideLicense)?_c('div',{staticClass:"fr-footer__bottom-copy"},[_vm._m(0)]):_vm._e()]):_vm._e()])])};
-var __vue_staticRenderFns__ = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',[_vm._v("\n          Sauf mention contraire, tous les textes de ce site sont sous\n          "),_c('a',{attrs:{"href":"https://github.com/etalab/licence-ouverte/blob/master/LO.md","target":"_blank"}},[_vm._v("licence etalab-2.0")])])}];
+var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:"v-gouv-fr-callout fr-callout" + (_vm.icon !== null ? ' fr-fi-'+_vm.icon : '')},[_c('h4',{staticClass:"fr-callout__title"},[_vm._v(_vm._s(_vm.title))]),_vm._v(" "),_c('p',{staticClass:"fr-callout__text"},[_vm._v("\n    "+_vm._s(_vm.description)+"\n  ")]),_vm._v(" "),(_vm.buttonTitle)?_c('button',{staticClass:"fr-btn",on:{"click":_vm.pushClick}},[_vm._v(_vm._s(_vm.buttonTitle))]):_vm._e()])};
+var __vue_staticRenderFns__ = [];
 
   /* style */
   const __vue_inject_styles__ = undefined;
@@ -152,7 +143,7 @@ var __vue_staticRenderFns__ = [function () {var _vm=this;var _h=_vm.$createEleme
   
 
   
-  var VGouvFrFooter = normalizeComponent_1(
+  var VGouvFrCallout = normalizeComponent_1(
     { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
     __vue_inject_styles__,
     __vue_script__,
@@ -163,4 +154,4 @@ var __vue_staticRenderFns__ = [function () {var _vm=this;var _h=_vm.$createEleme
     undefined
   );
 
-export default VGouvFrFooter;
+export default VGouvFrCallout;

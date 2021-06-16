@@ -46,7 +46,7 @@
               </div>
             </div>
             <div class="fr-header__service" v-if="nameSite !== null">
-              <a href="/" :title="`Accueil - ` + nameSite">
+              <a :href="homeLink" :title="`Accueil - ` + nameSite">
                 <p class="fr-header__service-title">{{ nameSite }}</p>
               </a>
               <p class="fr-header__service-tagline">
@@ -124,7 +124,7 @@
       class="fr-header__menu fr-modal"
       id="modal-870"
       aria-labelledby="button-871"
-      v-if="menuLinks.length > 0 || topLinks.length > 0"
+      v-if="menuLinks.length > 0 || topLinks.length > 0 || displaySetting"
     >
       <div class="fr-container">
         <button class="fr-link--close fr-link" aria-controls="modal-870">
@@ -165,6 +165,10 @@ export default {
       default: () => {
         return ["République", "Française"];
       },
+    },
+    homeLink: {
+      type: String,
+      default: "/"
     },
     nameSite: {
       type: String,
