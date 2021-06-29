@@ -8,7 +8,6 @@
     "
   >
     <div class="fr-card__body">
-      <p class="fr-card__detail" v-if="details !== null">{{ details }}</p>
       <h4 class="fr-card__title">
         <template v-if="href !== null">
           <a :href="href" class="fr-card__link">{{ title }}</a>
@@ -20,6 +19,7 @@
       <p class="fr-card__desc" v-if="description !== null">
         {{ description }}
       </p>
+      <p class="fr-card__detail" v-if="details !== null">{{ details }}</p>
     </div>
     <div class="fr-card__img" v-if="image !== null && image.src !== null">
       <img :src="image.src" class="fr-responsive-img" alt="" />
