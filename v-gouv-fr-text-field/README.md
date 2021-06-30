@@ -39,6 +39,8 @@ Textfield design system État
 - **help** : *String* — message d'aide 
 - **id** : *String* — id du champ
 - **label** : *String* — label du champ
+- **min-date** : *String* — date minimum si champ date (format YYYY-MM-DD)
+- **max-date** : *String* — date maximum si champ date (format YYYY-MM-DD)
 - **name** : *String* — nom du champ
 - **password** : *Boolean* — marque le champ comme mot de passe
 - **placeholder** : *String* — placeholder du champ

@@ -3,7 +3,24 @@
     <div :class="`fr-input-group ` + (error && !valid ? 'fr-input-group--error' : '') + (valid && !error ? 'fr-input-group--valid' : '')">
       <label class="fr-label" :for="id">{{ label }}</label>
       <p v-if="help" class="fr-hint-text" :id="id+`-hint-desc-hint`">{{ help }}</p>
+
+      <div class="fr-input-wrap fr-fi-calendar-line" v-if="date">
+        <input 
+        :id="id" 
+        :name="name"
+        :class="`fr-input ` + (error && !valid ? 'fr-input--error' : '') + (valid && !error ? 'fr-input--valid' : '')"
+        type="date"
+        :min="minDate"
+        :max="maxDate"
+        :placeholder="placeholder" 
+        :value="value" 
+        @change="valueChanged"
+        @keydown="keydown"
+        :disabled="disabled"
+        >
+      </div>
       <input 
+        v-else
         :id="id" 
         :name="name"
         :class="`fr-input ` + (error && !valid ? 'fr-input--error' : '') + (valid && !error ? 'fr-input--valid' : '')"
@@ -62,6 +79,14 @@
         type: String,
         default: ''
       },
+      minDate:{
+        type: String,
+        default: ''
+      },
+      maxDate:{
+        type: String,
+        default: ''
+      },
       name:{
         type: String,
         default: 'text-input-text'
@@ -84,7 +109,7 @@
       },
     },
     computed:{
-      inputType:() => {
+      inputType: function(){
         if(this.date)
           return "date";
         else if(this.password)
