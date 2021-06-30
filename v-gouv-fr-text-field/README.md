@@ -33,6 +33,7 @@ Textfield design system État
 
 ### Attributs 
 - *v-model* :  variable en entrée/sortie
+- **date** : *Boolean* — marque le champ comme date
 - **disabled** : *Boolean* — desactive le champ
 - **error** : *String* — message d'erreur (si erreur)
 - **help** : *String* — message d'aide 

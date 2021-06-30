@@ -7,7 +7,7 @@
         :id="id" 
         :name="name"
         :class="`fr-input ` + (error && !valid ? 'fr-input--error' : '') + (valid && !error ? 'fr-input--valid' : '')"
-        :type="password ? 'password' : 'text'"
+        :type="inputType"
         :placeholder="placeholder" 
         :value="value" 
         @change="valueChanged"
@@ -38,7 +38,11 @@
   export default {
     name: 'v-gouv-fr-text-field',
     props: {
-      disabled: {
+      date:{
+        type: Boolean,
+        default: false,
+      },
+      disabled:{
         type: Boolean,
         default: false
       },
@@ -78,6 +82,16 @@
         type: String,
         default: null
       },
+    },
+    computed:{
+      inputType:() => {
+        if(this.date)
+          return "date";
+        else if(this.password)
+          return "password";
+        
+        return "text";
+      }
     },
     methods: {
       valueChanged(e){
