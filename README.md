@@ -1,4 +1,4 @@
-# Composants Vue.js pour le Design System d'État
+# Composants Vue.js 2 pour le Design System d'État
 
 Les composants ne sont pas disponible sur NPM
 
