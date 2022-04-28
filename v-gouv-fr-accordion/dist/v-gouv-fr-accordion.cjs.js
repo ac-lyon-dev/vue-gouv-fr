@@ -1,7 +1,7 @@
 'use strict';
 
-require('@gouvfr/dsfr/dist/css/dsfr.min.css');
-require('@gouvfr/dsfr/dist/js/dsfr.nomodule.min.js');
+require('@gouvfr/dsfr/dist/dsfr.min.css');
+require('@gouvfr/dsfr/dist/dsfr.nomodule.min.js');
 
 //
 var script = {

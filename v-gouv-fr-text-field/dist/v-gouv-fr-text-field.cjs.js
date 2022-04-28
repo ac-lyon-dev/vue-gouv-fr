@@ -1,11 +1,11 @@
 'use strict';
 
-require('@gouvfr/dsfr/dist/css/core.min.css');
-require('@gouvfr/dsfr/dist/js/core.nomodule.min.js');
-require('@gouvfr/dsfr/dist/css/forms.min.css');
-require('@gouvfr/dsfr/dist/css/inputs.min.css');
-require('@gouvfr/dsfr/dist/css/schemes.min.css');
-require('@gouvfr/dsfr/dist/js/schemes.nomodule.min.js');
+require('@gouvfr/dsfr/dist/core/core.min.css');
+require('@gouvfr/dsfr/dist/component/form/form.min.css');
+require('@gouvfr/dsfr/dist/component/link/link.min.css');
+require('@gouvfr/dsfr/dist/component/button/button.min.css');
+require('@gouvfr/dsfr/dist/component/input/input.min.css');
+require('@gouvfr/dsfr/dist/utility/icons/icons-business/icons-business.min.css');
 
 //
 var script = {
@@ -174,7 +174,7 @@ var normalizeComponent_1 = normalizeComponent;
 const __vue_script__ = script;
 
 /* template */
-var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"v-gouv-fr-text-field"},[_c('div',{class:"fr-input-group " + (_vm.error && !_vm.valid ? 'fr-input-group--error' : '') + (_vm.valid && !_vm.error ? 'fr-input-group--valid' : '')},[_c('label',{staticClass:"fr-label",attrs:{"for":_vm.id}},[_vm._v(_vm._s(_vm.label))]),_vm._v(" "),(_vm.help)?_c('p',{staticClass:"fr-hint-text",attrs:{"id":_vm.id+"-hint-desc-hint"}},[_vm._v(_vm._s(_vm.help))]):_vm._e(),_vm._v(" "),(_vm.date)?_c('div',{staticClass:"fr-input-wrap fr-fi-calendar-line"},[_c('input',{class:"fr-input " + (_vm.error && !_vm.valid ? 'fr-input--error' : '') + (_vm.valid && !_vm.error ? 'fr-input--valid' : ''),attrs:{"id":_vm.id,"name":_vm.name,"type":"date","min":_vm.minDate,"max":_vm.maxDate,"placeholder":_vm.placeholder,"disabled":_vm.disabled},domProps:{"value":_vm.value},on:{"change":_vm.valueChanged,"keydown":_vm.keydown}})]):_c('input',{class:"fr-input " + (_vm.error && !_vm.valid ? 'fr-input--error' : '') + (_vm.valid && !_vm.error ? 'fr-input--valid' : ''),attrs:{"id":_vm.id,"name":_vm.name,"type":_vm.inputType,"placeholder":_vm.placeholder,"disabled":_vm.disabled},domProps:{"value":_vm.value},on:{"change":_vm.valueChanged,"keydown":_vm.keydown}}),_vm._v(" "),(_vm.error && !_vm.valid)?_c('p',{staticClass:"fr-error-text",attrs:{"id":_vm.id+"-error-desc-error"}},[_vm._v("\n          "+_vm._s(_vm.error)+"\n      ")]):(!_vm.error && _vm.valid)?_c('p',{staticClass:"fr-valid-text",attrs:{"id":_vm.id+"-error-desc-valid"}},[_vm._v("\n          "+_vm._s(_vm.valid)+"\n      ")]):_vm._e()])])};
+var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"v-gouv-fr-text-field"},[_c('div',{class:"fr-input-group " + (_vm.error && !_vm.valid ? 'fr-input-group--error' : '') + (_vm.valid && !_vm.error ? 'fr-input-group--valid' : '')},[_c('label',{staticClass:"fr-label",attrs:{"for":_vm.id}},[_vm._v(_vm._s(_vm.label))]),_vm._v(" "),(_vm.help)?_c('p',{staticClass:"fr-hint-text",attrs:{"id":_vm.id+"-hint-desc-hint"}},[_vm._v(_vm._s(_vm.help))]):_vm._e(),_vm._v(" "),(_vm.date)?_c('div',{staticClass:"fr-input-wrap fr-icon-calendar-line"},[_c('input',{class:"fr-input " + (_vm.error && !_vm.valid ? 'fr-input--error' : '') + (_vm.valid && !_vm.error ? 'fr-input--valid' : ''),attrs:{"id":_vm.id,"name":_vm.name,"type":"date","min":_vm.minDate,"max":_vm.maxDate,"placeholder":_vm.placeholder,"disabled":_vm.disabled},domProps:{"value":_vm.value},on:{"change":_vm.valueChanged,"keydown":_vm.keydown}})]):_c('input',{class:"fr-input " + (_vm.error && !_vm.valid ? 'fr-input--error' : '') + (_vm.valid && !_vm.error ? 'fr-input--valid' : ''),attrs:{"id":_vm.id,"name":_vm.name,"type":_vm.inputType,"placeholder":_vm.placeholder,"disabled":_vm.disabled},domProps:{"value":_vm.value},on:{"change":_vm.valueChanged,"keydown":_vm.keydown}}),_vm._v(" "),(_vm.error && !_vm.valid)?_c('p',{staticClass:"fr-error-text",attrs:{"id":_vm.id+"-error-desc-error"}},[_vm._v("\n          "+_vm._s(_vm.error)+"\n      ")]):(!_vm.error && _vm.valid)?_c('p',{staticClass:"fr-valid-text",attrs:{"id":_vm.id+"-error-desc-valid"}},[_vm._v("\n          "+_vm._s(_vm.valid)+"\n      ")]):_vm._e()])])};
 var __vue_staticRenderFns__ = [];
 
   /* style */

@@ -1,12 +1,12 @@
 'use strict';
 
-require('@gouvfr/dsfr/dist/css/core.min.css');
-require('@gouvfr/dsfr/dist/js/core.nomodule.min.js');
-require('@gouvfr/dsfr/dist/css/links.min.css');
-require('@gouvfr/dsfr/dist/css/buttons.min.css');
-require('@gouvfr/dsfr/dist/js/buttons.nomodule.min.js');
-require('@gouvfr/dsfr/dist/css/schemes.min.css');
-require('@gouvfr/dsfr/dist/js/schemes.nomodule.min.js');
+require('@gouvfr/dsfr/dist/core/core.min.css');
+require('@gouvfr/dsfr/dist/core/core.nomodule.min.js');
+require('@gouvfr/dsfr/dist/component/link/link.min.css');
+require('@gouvfr/dsfr/dist/component/button/button.min.css');
+require('@gouvfr/dsfr/dist/component/button/button.nomodule.min.js');
+require('@gouvfr/dsfr/dist/scheme/scheme.min.css');
+require('@gouvfr/dsfr/dist/scheme/scheme.module.min.js');
 
 //
 var script = {
@@ -40,6 +40,14 @@ var script = {
       type: Boolean,
       default: false
     },
+    tertiary: {
+      type: Boolean,
+      default: false
+    },
+    noOutline: {
+      type: Boolean,
+      default: false
+    },
     small: {
       type: Boolean,
       default: false
@@ -50,8 +58,16 @@ var script = {
     }
   },
   computed: {
-    //gets type class (primary or secondary)
+    //gets type class (primary or secondary or tertiary)
     typeClass: function typeClass() {
+      if (this.tertiary && !this.secondary && !this.primary) {
+        if (this.noOutline) {
+          return 'fr-btn--tertiary-no-outline '; //trailing space for next classes
+        }
+
+        return 'fr-btn--tertiary '; //trailing space for next classes
+      }
+
       if (this.secondary && !this.primary) {
         return 'fr-btn--secondary '; //trailing space for next classes
       }
@@ -66,7 +82,7 @@ var script = {
     //gets icon class
     iconClass: function iconClass() {
       if (this.icon === '' || this.iconPosition !== 'left' && this.iconPosition !== 'right') return '';
-      var computedIconClass = 'fr-fi-' + this.icon;
+      var computedIconClass = 'fr-icon-' + this.icon;
 
       if (!this.iconOnly) {
         computedIconClass += ' fr-btn--icon-' + this.iconPosition;
