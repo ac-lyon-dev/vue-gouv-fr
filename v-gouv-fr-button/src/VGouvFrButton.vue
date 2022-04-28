@@ -13,16 +13,16 @@
   </div>
 </template>
 <script>
-  import "@gouvfr/dsfr/dist/css/core.min.css"
-  import "@gouvfr/dsfr/dist/js/core.nomodule.min.js"
+  import "@gouvfr/dsfr/dist/core/core.min.css"
+  import "@gouvfr/dsfr/dist/core/core.nomodule.min.js"
 
-  import "@gouvfr/dsfr/dist/css/links.min.css"
+  import "@gouvfr/dsfr/dist/component/link/link.min.css"
 
-  import "@gouvfr/dsfr/dist/css/buttons.min.css"
-  import "@gouvfr/dsfr/dist/js/buttons.nomodule.min.js"
+  import "@gouvfr/dsfr/dist/component/button/button.min.css"
+  import "@gouvfr/dsfr/dist/component/button/button.nomodule.min.js"
 
-  import "@gouvfr/dsfr/dist/css/schemes.min.css"
-  import "@gouvfr/dsfr/dist/js/schemes.nomodule.min.js"
+  import "@gouvfr/dsfr/dist/scheme/scheme.min.css"
+  import "@gouvfr/dsfr/dist/scheme/scheme.module.min.js"
 
   export default {
     name: 'v-gouv-fr-button',
@@ -55,6 +55,14 @@
         type: Boolean,
         default: false,
       },
+      tertiary: {
+        type: Boolean,
+        default: false,
+      },
+      noOutline: {
+        type: Boolean,
+        default: false,
+      },
       small: {
         type: Boolean,
         default: false,
@@ -65,8 +73,14 @@
       }
     },
     computed: { 
-      //gets type class (primary or secondary)
+      //gets type class (primary or secondary or tertiary)
       typeClass: function () {
+        if(this.tertiary && !this.secondary && !this.primary){
+          if(this.noOutline){
+            return 'fr-btn--tertiary-no-outline ' //trailing space for next classes
+          }
+          return 'fr-btn--tertiary ' //trailing space for next classes
+        }
         if(this.secondary && !this.primary){
           return 'fr-btn--secondary ' //trailing space for next classes
         }
@@ -87,7 +101,7 @@
         if(this.icon === '' || (this.iconPosition !== 'left' && this.iconPosition !== 'right'))
           return '';
         
-        let computedIconClass = 'fr-fi-' + this.icon;
+        let computedIconClass = 'fr-icon-' + this.icon;
         if(!this.iconOnly){
           computedIconClass += ' fr-btn--icon-'+this.iconPosition
         }
