@@ -38,6 +38,14 @@ var script = {
       type: Boolean,
       default: false
     },
+    tertiary: {
+      type: Boolean,
+      default: false
+    },
+    noOutline: {
+      type: Boolean,
+      default: false
+    },
     small: {
       type: Boolean,
       default: false
@@ -48,8 +56,16 @@ var script = {
     }
   },
   computed: {
-    //gets type class (primary or secondary)
+    //gets type class (primary or secondary or tertiary)
     typeClass: function typeClass() {
+      if (this.tertiary && !this.secondary && !this.primary) {
+        if (this.noOutline) {
+          return 'fr-btn--tertiary-no-outline '; //trailing space for next classes
+        }
+
+        return 'fr-btn--tertiary '; //trailing space for next classes
+      }
+
       if (this.secondary && !this.primary) {
         return 'fr-btn--secondary '; //trailing space for next classes
       }
