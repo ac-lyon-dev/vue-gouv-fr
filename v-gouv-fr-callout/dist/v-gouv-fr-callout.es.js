@@ -1,10 +1,10 @@
-import '@gouvfr/dsfr/dist/css/core.min.css';
-import '@gouvfr/dsfr/dist/js/core.nomodule.min.js';
-import '@gouvfr/dsfr/dist/css/callouts.min.css';
-import '@gouvfr/dsfr/dist/css/buttons.min.css';
-import '@gouvfr/dsfr/dist/js/buttons.nomodule.min.js';
-import '@gouvfr/dsfr/dist/css/schemes.min.css';
-import '@gouvfr/dsfr/dist/js/schemes.nomodule.min.js';
+import '@gouvfr/dsfr/dist/core/core.min.css';
+import '@gouvfr/dsfr/dist/core/core.nomodule.min.js';
+import '@gouvfr/dsfr/dist/component/callout/callout.min.css';
+import '@gouvfr/dsfr/dist/component/button/button.min.css';
+import '@gouvfr/dsfr/dist/component/button/button.nomodule.min.js';
+import '@gouvfr/dsfr/dist/scheme/scheme.min.css';
+import '@gouvfr/dsfr/dist/scheme/scheme.module.min.js';
 
 //
 var script = {
@@ -126,7 +126,7 @@ var normalizeComponent_1 = normalizeComponent;
 const __vue_script__ = script;
 
 /* template */
-var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:"v-gouv-fr-callout fr-callout" + (_vm.icon !== null ? ' fr-fi-'+_vm.icon : '')},[_c('h4',{staticClass:"fr-callout__title"},[_vm._v(_vm._s(_vm.title))]),_vm._v(" "),_c('p',{staticClass:"fr-callout__text"},[_vm._v("\n    "+_vm._s(_vm.description)+"\n  ")]),_vm._v(" "),(_vm.buttonTitle)?_c('button',{staticClass:"fr-btn",on:{"click":_vm.pushClick}},[_vm._v(_vm._s(_vm.buttonTitle))]):_vm._e()])};
+var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:"v-gouv-fr-callout fr-callout" + (_vm.icon !== null ? ' fr-icon-'+_vm.icon : '')},[_c('h4',{staticClass:"fr-callout__title"},[_vm._v(_vm._s(_vm.title))]),_vm._v(" "),_c('p',{staticClass:"fr-callout__text"},[_vm._v("\n    "+_vm._s(_vm.description)+"\n  ")]),_vm._v(" "),(_vm.buttonTitle)?_c('button',{staticClass:"fr-btn",on:{"click":_vm.pushClick}},[_vm._v(_vm._s(_vm.buttonTitle))]):_vm._e()])};
 var __vue_staticRenderFns__ = [];
 
   /* style */
