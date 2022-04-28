@@ -1,5 +1,5 @@
-import '@gouvfr/dsfr/dist/css/dsfr.min.css';
-import '@gouvfr/dsfr/dist/js/dsfr.nomodule.min.js';
+import '@gouvfr/dsfr/dist/dsfr.min.css';
+import '@gouvfr/dsfr/dist/dsfr.nomodule.min.js';
 
 //
 var script = {

@@ -70,14 +70,14 @@
                       (!displaySetting && index < 3) ||
                       (displaySetting && index < 2)
                     "
-                    :class="`fr-link fr-fi-` + link.icon"
+                    :class="`fr-link fr-icon-` + link.icon"
                     :href="link.href"
                     >{{ link.label }}</a
                   >
                 </li>
                 <li v-if="displaySetting">
                   <button
-                    class="fr-link fr-fi-theme-fill fr-link--icon-left"
+                    class="fr-link fr-icon-theme-fill fr-link--icon-left"
                     aria-controls="fr-theme-modal"
                     data-fr-opened="false"
                   >
@@ -154,8 +154,22 @@
   </header>
 </template>
 <script>
-import "@gouvfr/dsfr/dist/css/dsfr.min.css";
-import "@gouvfr/dsfr/dist/js/dsfr.nomodule.min.js";
+import "@gouvfr/dsfr/dist/core/core.min.css";
+import "@gouvfr/dsfr/dist/component/link/link.min.css";
+import "@gouvfr/dsfr/dist/component/logo/logo.min.css";
+import "@gouvfr/dsfr/dist/component/form/form.min.css";
+import "@gouvfr/dsfr/dist/component/button/button.min.css";
+import "@gouvfr/dsfr/dist/component/badge/badge.min.css";
+import "@gouvfr/dsfr/dist/component/navigation/navigation.min.css";
+import "@gouvfr/dsfr/dist/component/modal/modal.min.css";
+import "@gouvfr/dsfr/dist/component/input/input.min.css";
+import "@gouvfr/dsfr/dist/component/search/search.min.css";
+import "@gouvfr/dsfr/dist/component/header/header.min.css";
+
+import "@gouvfr/dsfr/dist/core/core.nomodule.min.js";
+import "@gouvfr/dsfr/dist/component/navigation/navigation.nomodule.min.js";
+import "@gouvfr/dsfr/dist/component/modal/modal.nomodule.min.js";
+import "@gouvfr/dsfr/dist/component/header/header.nomodule.min.js";
 
 export default {
   name: "v-gouv-fr-header",

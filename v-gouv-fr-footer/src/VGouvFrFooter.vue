@@ -35,12 +35,12 @@
             </li>
           </template>
           <li class="fr-footer__bottom-item" v-if="displaySetting">
-            <button class="fr-footer__bottom-link fr-fi-theme-fill fr-link--icon-left" aria-controls="fr-theme-modal" data-fr-opened="false">Paramètres d'affichage</button>
+            <button class="fr-footer__bottom-link fr-icon-theme-fill fr-link--icon-left" aria-controls="fr-theme-modal" data-fr-opened="false">Paramètres d'affichage</button>
           </li>
         </ul>
         <div class="fr-footer__bottom-copy" v-if="!hideLicense">
           <p>
-            Sauf mention contraire, tous les textes de ce site sont sous
+            Sauf mention contraire, tous les contenus de ce site sont sous
             <a
               href="https://github.com/etalab/licence-ouverte/blob/master/LO.md"
               target="_blank"
@@ -53,8 +53,10 @@
   </footer>
 </template>
 <script>
-import "@gouvfr/dsfr/dist/css/dsfr.min.css"
-import "@gouvfr/dsfr/dist/js/dsfr.nomodule.min.js"
+import "@gouvfr/dsfr/dist/core/core.min.css"
+import "@gouvfr/dsfr/dist/component/link/link.min.css"
+import "@gouvfr/dsfr/dist/component/logo/logo.min.css"
+import "@gouvfr/dsfr/dist/component/footer/footer.min.css"
 
 export default {
   name: "v-gouv-fr-footer",

@@ -1,9 +1,9 @@
-import '@gouvfr/dsfr/dist/css/core.min.css';
-import '@gouvfr/dsfr/dist/js/core.nomodule.min.js';
-import '@gouvfr/dsfr/dist/css/links.min.css';
-import '@gouvfr/dsfr/dist/css/cards.min.css';
-import '@gouvfr/dsfr/dist/css/schemes.min.css';
-import '@gouvfr/dsfr/dist/js/schemes.nomodule.min.js';
+import '@gouvfr/dsfr/dist/core/core.min.css';
+import '@gouvfr/dsfr/dist/core/core.nomodule.min.js';
+import '@gouvfr/dsfr/dist/component/link/link.min.css';
+import '@gouvfr/dsfr/dist/component/card/card.min.css';
+import '@gouvfr/dsfr/dist/scheme/scheme.min.css';
+import '@gouvfr/dsfr/dist/scheme/scheme.module.min.js';
 
 //
 var script = {
