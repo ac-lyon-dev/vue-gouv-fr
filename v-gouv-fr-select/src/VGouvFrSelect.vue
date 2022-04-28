@@ -19,16 +19,9 @@
   </div>
 </template>
 <script>
-  import "@gouvfr/dsfr/dist/css/core.min.css"
-  import "@gouvfr/dsfr/dist/js/core.nomodule.min.js"
-
-  import "@gouvfr/dsfr/dist/css/forms.min.css"
-
-  import "@gouvfr/dsfr/dist/css/inputs.min.css"
-  import "@gouvfr/dsfr/dist/css/selects.min.css"
-
-  import "@gouvfr/dsfr/dist/css/schemes.min.css"
-  import "@gouvfr/dsfr/dist/js/schemes.nomodule.min.js"
+  import "@gouvfr/dsfr/dist/core/core.min.css"
+  import "@gouvfr/dsfr/dist/component/form/form.min.css"
+  import "@gouvfr/dsfr/dist/component/select/select.min.css"
 
   export default {
     name: 'v-gouv-fr-select',
