@@ -28,6 +28,8 @@ Button Design System État
       @click="maFonction"
       />
 
+Lors de l'utilisation d'icones, veuillez importer également les feuilles css qui concernant les icones que vous souhaitez utiliser
+
 ### Attributs 
 - **disabled** : *Boolean* — desactive le bouton
 - **icon** : *String* icone du bouton
@@ -37,4 +39,6 @@ Button Design System État
 - **large** : *Boolean* — gros bouton
 - **primary** : *Boolean* — Bouton primaire (défaut: TRUE)
 - **secondary** : *Boolean* — Bouton secondaire (défaut: FALSE)
+- **tertiary** : *Boolean* - Bouton tertiaire (defaut: FALSE)
+- **no-outline**: *Boolean* - Pas de bordure (pour bouton tertiaire uniquement, défaut: FALSE)
 - **small** : *Boolean* — petit bouton

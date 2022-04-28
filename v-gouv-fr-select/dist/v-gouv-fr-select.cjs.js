@@ -1,99 +1,60 @@
 'use strict';
 
 require('@gouvfr/dsfr/dist/core/core.min.css');
-require('@gouvfr/dsfr/dist/core/core.nomodule.min.js');
-require('@gouvfr/dsfr/dist/component/link/link.min.css');
-require('@gouvfr/dsfr/dist/component/button/button.min.css');
-require('@gouvfr/dsfr/dist/component/button/button.nomodule.min.js');
-require('@gouvfr/dsfr/dist/scheme/scheme.min.css');
-require('@gouvfr/dsfr/dist/scheme/scheme.module.min.js');
+require('@gouvfr/dsfr/dist/component/form/form.min.css');
+require('@gouvfr/dsfr/dist/component/select/select.min.css');
 
 //
 var script = {
-  name: 'v-gouv-fr-button',
+  name: 'v-gouv-fr-select',
   props: {
+    defaultOption: {
+      type: String,
+      default: 'Sélectionnez une option'
+    },
     disabled: {
       type: Boolean,
       default: false
     },
-    icon: {
+    error: {
       type: String,
       default: ''
     },
-    iconPosition: {
+    help: {
       type: String,
-      default: 'left'
+      default: ''
     },
-    iconOnly: {
-      type: Boolean,
-      default: false
+    id: {
+      type: String,
+      default: 'mon-select'
+    },
+    items: {
+      type: Array,
+      default: function _default() {
+        return [];
+      }
     },
     label: {
       type: String,
-      default: 'Bouton'
+      default: ''
     },
-    primary: {
-      type: Boolean,
-      default: false
+    name: {
+      type: String,
+      default: 'mon-select'
     },
-    secondary: {
-      type: Boolean,
-      default: false
+    valid: {
+      type: String,
+      default: ''
     },
-    tertiary: {
-      type: Boolean,
-      default: false
-    },
-    noOutline: {
-      type: Boolean,
-      default: false
-    },
-    small: {
-      type: Boolean,
-      default: false
-    },
-    large: {
-      type: Boolean,
-      default: false
-    }
-  },
-  computed: {
-    //gets type class (primary or secondary or tertiary)
-    typeClass: function typeClass() {
-      if (this.tertiary && !this.secondary && !this.primary) {
-        if (this.noOutline) {
-          return 'fr-btn--tertiary-no-outline '; //trailing space for next classes
-        }
-
-        return 'fr-btn--tertiary '; //trailing space for next classes
-      }
-
-      if (this.secondary && !this.primary) {
-        return 'fr-btn--secondary '; //trailing space for next classes
-      }
-
-      return '';
-    },
-    //gets size class (small, medium or large)
-    sizeClass: function sizeClass() {
-      if (this.small) return 'fr-btn--sm ';else if (this.large) return 'fr-btn--lg ';
-      return '';
-    },
-    //gets icon class
-    iconClass: function iconClass() {
-      if (this.icon === '' || this.iconPosition !== 'left' && this.iconPosition !== 'right') return '';
-      var computedIconClass = 'fr-icon-' + this.icon;
-
-      if (!this.iconOnly) {
-        computedIconClass += ' fr-btn--icon-' + this.iconPosition;
-      }
-
-      return computedIconClass;
+    value: {
+      type: String,
+      default: null
     }
   },
   methods: {
-    pushClick: function pushClick(e) {
-      this.$emit('click', e);
+    change: function change(e) {
+      this.$emit('input', e.target.value);
+      this.$emit('change', e.target.value);
     }
   }
 };
@@ -187,7 +148,7 @@ var normalizeComponent_1 = normalizeComponent;
 const __vue_script__ = script;
 
 /* template */
-var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"v-gouv-fr-button"},[_c('button',{class:"fr-btn " + _vm.typeClass + _vm.sizeClass + _vm.iconClass,attrs:{"disabled":_vm.disabled,"title":_vm.iconOnly ? _vm.label : undefined},on:{"click":_vm.pushClick}},[(_vm.iconOnly)?_c('span',{staticClass:"sr-only"},[_vm._v(_vm._s(_vm.label))]):[_vm._v("\n      "+_vm._s(_vm.label)+"\n    ")]],2)])};
+var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:"v-gouv-fr-select fr-select-group " + (_vm.error && !_vm.valid ? 'fr-select-group--error' : '') + (_vm.valid && !_vm.error ? 'fr-select-group--valid' : '')},[(_vm.label)?_c('label',{staticClass:"fr-label",attrs:{"for":_vm.id}},[_vm._v("\n    "+_vm._s(_vm.label)+"\n    "),(_vm.help)?_c('span',{staticClass:"fr-hint-text"},[_vm._v(_vm._s(_vm.help))]):_vm._e()]):_vm._e(),_vm._v(" "),_c('select',{class:"fr-select " +  (_vm.error && !_vm.valid ? 'fr-select--error' : '') + (_vm.valid && !_vm.error ? 'fr-select--valid' : ''),attrs:{"disabled":_vm.disabled,"id":_vm.id,"name":_vm.name},on:{"change":_vm.change}},[_c('option',{attrs:{"value":"","disabled":"","hidden":""},domProps:{"selected":_vm.value === null || _vm.value === undefined || _vm.value === ''}},[_vm._v(_vm._s(_vm.defaultOption))]),_vm._v(" "),_vm._l((_vm.items),function(item,index){return [_c('option',{key:_vm.id+"-option-"+index,domProps:{"value":item.value,"selected":_vm.value === item.value}},[_vm._v(_vm._s(item.label))])]})],2),_vm._v(" "),(_vm.error && !_vm.valid)?_c('p',{staticClass:"fr-error-text",attrs:{"id":_vm.id + "-desc-error"}},[_vm._v("\n    "+_vm._s(_vm.error)+"\n  ")]):_vm._e(),_vm._v(" "),(!_vm.error && _vm.valid)?_c('p',{staticClass:"fr-valid-text",attrs:{"id":_vm.id + "-desc-valid"}},[_vm._v("\n    "+_vm._s(_vm.valid)+"\n  ")]):_vm._e()])};
 var __vue_staticRenderFns__ = [];
 
   /* style */
@@ -204,7 +165,7 @@ var __vue_staticRenderFns__ = [];
   
 
   
-  var VGouvFrButton = normalizeComponent_1(
+  var VGouvFrSelect = normalizeComponent_1(
     { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
     __vue_inject_styles__,
     __vue_script__,
@@ -215,4 +176,4 @@ var __vue_staticRenderFns__ = [];
     undefined
   );
 
-module.exports = VGouvFrButton;
+module.exports = VGouvFrSelect;

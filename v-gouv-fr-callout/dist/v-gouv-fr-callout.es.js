@@ -1,95 +1,34 @@
-'use strict';
-
-require('@gouvfr/dsfr/dist/core/core.min.css');
-require('@gouvfr/dsfr/dist/core/core.nomodule.min.js');
-require('@gouvfr/dsfr/dist/component/link/link.min.css');
-require('@gouvfr/dsfr/dist/component/button/button.min.css');
-require('@gouvfr/dsfr/dist/component/button/button.nomodule.min.js');
-require('@gouvfr/dsfr/dist/scheme/scheme.min.css');
-require('@gouvfr/dsfr/dist/scheme/scheme.module.min.js');
+import '@gouvfr/dsfr/dist/core/core.min.css';
+import '@gouvfr/dsfr/dist/core/core.nomodule.min.js';
+import '@gouvfr/dsfr/dist/component/callout/callout.min.css';
+import '@gouvfr/dsfr/dist/component/button/button.min.css';
+import '@gouvfr/dsfr/dist/component/button/button.nomodule.min.js';
+import '@gouvfr/dsfr/dist/scheme/scheme.min.css';
+import '@gouvfr/dsfr/dist/scheme/scheme.module.min.js';
 
 //
 var script = {
-  name: 'v-gouv-fr-button',
+  name: "v-gouv-fr-callout",
   props: {
-    disabled: {
-      type: Boolean,
-      default: false
+    title: {
+      type: String,
+      default: "Titre"
+    },
+    description: {
+      type: String,
+      default: "Description"
     },
     icon: {
       type: String,
-      default: ''
+      default: null
     },
-    iconPosition: {
+    buttonTitle: {
       type: String,
-      default: 'left'
-    },
-    iconOnly: {
-      type: Boolean,
-      default: false
-    },
-    label: {
-      type: String,
-      default: 'Bouton'
-    },
-    primary: {
-      type: Boolean,
-      default: false
-    },
-    secondary: {
-      type: Boolean,
-      default: false
-    },
-    tertiary: {
-      type: Boolean,
-      default: false
-    },
-    noOutline: {
-      type: Boolean,
-      default: false
-    },
-    small: {
-      type: Boolean,
-      default: false
-    },
-    large: {
-      type: Boolean,
-      default: false
+      default: null
     }
   },
-  computed: {
-    //gets type class (primary or secondary or tertiary)
-    typeClass: function typeClass() {
-      if (this.tertiary && !this.secondary && !this.primary) {
-        if (this.noOutline) {
-          return 'fr-btn--tertiary-no-outline '; //trailing space for next classes
-        }
-
-        return 'fr-btn--tertiary '; //trailing space for next classes
-      }
-
-      if (this.secondary && !this.primary) {
-        return 'fr-btn--secondary '; //trailing space for next classes
-      }
-
-      return '';
-    },
-    //gets size class (small, medium or large)
-    sizeClass: function sizeClass() {
-      if (this.small) return 'fr-btn--sm ';else if (this.large) return 'fr-btn--lg ';
-      return '';
-    },
-    //gets icon class
-    iconClass: function iconClass() {
-      if (this.icon === '' || this.iconPosition !== 'left' && this.iconPosition !== 'right') return '';
-      var computedIconClass = 'fr-icon-' + this.icon;
-
-      if (!this.iconOnly) {
-        computedIconClass += ' fr-btn--icon-' + this.iconPosition;
-      }
-
-      return computedIconClass;
-    }
+  data: function data() {
+    return {};
   },
   methods: {
     pushClick: function pushClick(e) {
@@ -187,7 +126,7 @@ var normalizeComponent_1 = normalizeComponent;
 const __vue_script__ = script;
 
 /* template */
-var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"v-gouv-fr-button"},[_c('button',{class:"fr-btn " + _vm.typeClass + _vm.sizeClass + _vm.iconClass,attrs:{"disabled":_vm.disabled,"title":_vm.iconOnly ? _vm.label : undefined},on:{"click":_vm.pushClick}},[(_vm.iconOnly)?_c('span',{staticClass:"sr-only"},[_vm._v(_vm._s(_vm.label))]):[_vm._v("\n      "+_vm._s(_vm.label)+"\n    ")]],2)])};
+var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:"v-gouv-fr-callout fr-callout" + (_vm.icon !== null ? ' fr-icon-'+_vm.icon : '')},[_c('h4',{staticClass:"fr-callout__title"},[_vm._v(_vm._s(_vm.title))]),_vm._v(" "),_c('p',{staticClass:"fr-callout__text"},[_vm._v("\n    "+_vm._s(_vm.description)+"\n  ")]),_vm._v(" "),(_vm.buttonTitle)?_c('button',{staticClass:"fr-btn",on:{"click":_vm.pushClick}},[_vm._v(_vm._s(_vm.buttonTitle))]):_vm._e()])};
 var __vue_staticRenderFns__ = [];
 
   /* style */
@@ -204,7 +143,7 @@ var __vue_staticRenderFns__ = [];
   
 
   
-  var VGouvFrButton = normalizeComponent_1(
+  var VGouvFrCallout = normalizeComponent_1(
     { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
     __vue_inject_styles__,
     __vue_script__,
@@ -215,4 +154,4 @@ var __vue_staticRenderFns__ = [];
     undefined
   );
 
-module.exports = VGouvFrButton;
+export default VGouvFrCallout;

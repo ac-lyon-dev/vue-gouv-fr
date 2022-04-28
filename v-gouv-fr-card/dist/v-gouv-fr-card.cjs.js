@@ -1,11 +1,11 @@
 'use strict';
 
-require('@gouvfr/dsfr/dist/css/core.min.css');
-require('@gouvfr/dsfr/dist/js/core.nomodule.min.js');
-require('@gouvfr/dsfr/dist/css/links.min.css');
-require('@gouvfr/dsfr/dist/css/cards.min.css');
-require('@gouvfr/dsfr/dist/css/schemes.min.css');
-require('@gouvfr/dsfr/dist/js/schemes.nomodule.min.js');
+require('@gouvfr/dsfr/dist/core/core.min.css');
+require('@gouvfr/dsfr/dist/core/core.nomodule.min.js');
+require('@gouvfr/dsfr/dist/component/link/link.min.css');
+require('@gouvfr/dsfr/dist/component/card/card.min.css');
+require('@gouvfr/dsfr/dist/scheme/scheme.min.css');
+require('@gouvfr/dsfr/dist/scheme/scheme.module.min.js');
 
 //
 var script = {
@@ -142,7 +142,7 @@ const __vue_script__ = script;
 var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:"v-gouv-fr-card fr-card" +
     (!_vm.noEnlargeLink ? ' fr-enlarge-link' : '') +
     (_vm.horizontal ? ' fr-card--horizontal' : '') +
-    (_vm.hideArrow ? ' fr-card--no-arrow' : '')},[_c('div',{staticClass:"fr-card__body"},[(_vm.details !== null)?_c('p',{staticClass:"fr-card__detail"},[_vm._v(_vm._s(_vm.details))]):_vm._e(),_vm._v(" "),_c('h4',{staticClass:"fr-card__title"},[(_vm.href !== null)?[_c('a',{staticClass:"fr-card__link",attrs:{"href":_vm.href}},[_vm._v(_vm._s(_vm.title))])]:[_vm._v("\n        "+_vm._s(_vm.title)+"\n      ")]],2),_vm._v(" "),(_vm.description !== null)?_c('p',{staticClass:"fr-card__desc"},[_vm._v("\n      "+_vm._s(_vm.description)+"\n    ")]):_vm._e()]),_vm._v(" "),(_vm.image !== null && _vm.image.src !== null)?_c('div',{staticClass:"fr-card__img"},[_c('img',{staticClass:"fr-responsive-img",attrs:{"src":_vm.image.src,"alt":""}})]):_vm._e()])};
+    (_vm.hideArrow ? ' fr-card--no-arrow' : '')},[_c('div',{staticClass:"fr-card__body"},[_c('h4',{staticClass:"fr-card__title"},[(_vm.href !== null)?[_c('a',{staticClass:"fr-card__link",attrs:{"href":_vm.href}},[_vm._v(_vm._s(_vm.title))])]:[_vm._v("\n        "+_vm._s(_vm.title)+"\n      ")]],2),_vm._v(" "),(_vm.description !== null)?_c('p',{staticClass:"fr-card__desc"},[_vm._v("\n      "+_vm._s(_vm.description)+"\n    ")]):_vm._e(),_vm._v(" "),(_vm.details !== null)?_c('p',{staticClass:"fr-card__detail"},[_vm._v(_vm._s(_vm.details))]):_vm._e()]),_vm._v(" "),(_vm.image !== null && _vm.image.src !== null)?_c('div',{staticClass:"fr-card__img"},[_c('img',{staticClass:"fr-responsive-img",attrs:{"src":_vm.image.src,"alt":""}})]):_vm._e()])};
 var __vue_staticRenderFns__ = [];
 
   /* style */

@@ -3,11 +3,28 @@
     <div :class="`fr-input-group ` + (error && !valid ? 'fr-input-group--error' : '') + (valid && !error ? 'fr-input-group--valid' : '')">
       <label class="fr-label" :for="id">{{ label }}</label>
       <p v-if="help" class="fr-hint-text" :id="id+`-hint-desc-hint`">{{ help }}</p>
-      <input 
+
+      <div class="fr-input-wrap fr-icon-calendar-line" v-if="date">
+        <input 
         :id="id" 
         :name="name"
         :class="`fr-input ` + (error && !valid ? 'fr-input--error' : '') + (valid && !error ? 'fr-input--valid' : '')"
-        :type="password ? 'password' : 'text'"
+        type="date"
+        :min="minDate"
+        :max="maxDate"
+        :placeholder="placeholder" 
+        :value="value" 
+        @change="valueChanged"
+        @keydown="keydown"
+        :disabled="disabled"
+        >
+      </div>
+      <input 
+        v-else
+        :id="id" 
+        :name="name"
+        :class="`fr-input ` + (error && !valid ? 'fr-input--error' : '') + (valid && !error ? 'fr-input--valid' : '')"
+        :type="inputType"
         :placeholder="placeholder" 
         :value="value" 
         @change="valueChanged"
@@ -25,20 +42,21 @@
   </div>
 </template>
 <script>
-  import "@gouvfr/dsfr/dist/css/core.min.css"
-  import "@gouvfr/dsfr/dist/js/core.nomodule.min.js"
-
-  import "@gouvfr/dsfr/dist/css/forms.min.css"
-
-  import "@gouvfr/dsfr/dist/css/inputs.min.css"
-
-  import "@gouvfr/dsfr/dist/css/schemes.min.css"
-  import "@gouvfr/dsfr/dist/js/schemes.nomodule.min.js"
+  import "@gouvfr/dsfr/dist/core/core.min.css"
+  import "@gouvfr/dsfr/dist/component/form/form.min.css"
+  import "@gouvfr/dsfr/dist/component/link/link.min.css"
+  import "@gouvfr/dsfr/dist/component/button/button.min.css"
+  import "@gouvfr/dsfr/dist/component/input/input.min.css"
+  import "@gouvfr/dsfr/dist/utility/icons/icons-business/icons-business.min.css"
 
   export default {
     name: 'v-gouv-fr-text-field',
     props: {
-      disabled: {
+      date:{
+        type: Boolean,
+        default: false,
+      },
+      disabled:{
         type: Boolean,
         default: false
       },
@@ -55,6 +73,14 @@
         default: 'text-input-text'
       },
       label:{
+        type: String,
+        default: ''
+      },
+      minDate:{
+        type: String,
+        default: ''
+      },
+      maxDate:{
         type: String,
         default: ''
       },
@@ -78,6 +104,16 @@
         type: String,
         default: null
       },
+    },
+    computed:{
+      inputType: function(){
+        if(this.date)
+          return "date";
+        else if(this.password)
+          return "password";
+        
+        return "text";
+      }
     },
     methods: {
       valueChanged(e){

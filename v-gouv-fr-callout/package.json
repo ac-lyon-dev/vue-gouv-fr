@@ -1,13 +1,13 @@
 {
-  "name": "@vue-gouv-fr/v-gouv-fr-header",
+  "name": "@vue-gouv-fr/v-gouv-fr-callout",
   "version": "1.5.0",
-  "description": "Composant Header du design system de l'État",
+  "description": "Composant callout du Design System d'État",
   "scripts": {
-    "build": "bili --name v-gouv-fr-header --format cjs,es --plugin vue",
+    "build": "bili --name v-gouv-fr-callout --format cjs,es --plugin vue",
     "sonar": "sonar-scanner",
     "prepublish": "yarn run build"
   },
-  "main": "dist/v-gouv-fr-header.cjs",
+  "main": "dist/v-gouv-fr-callout.cjs",
   "author": "Loïc Salanon <loic.salanon@ac-lyon.fr>",
   "license": "MIT",
   "devDependencies": {
@@ -16,11 +16,11 @@
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
     "rollup-plugin-vue": "^4.6.1",
-    "vue": "^2.6.12",
-    "vue-template-compiler": "^2.6.12"
+    "vue": "^2.6.11",
+    "vue-template-compiler": "^2.6.11"
   },
   "peerDependencies": {
     "@gouvfr/dsfr": "^1.5.0",
-    "vue": "^2.6.12"
+    "vue": "^2.6.11"
   }
 }
