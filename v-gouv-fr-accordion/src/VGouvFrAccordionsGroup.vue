@@ -1,7 +1,7 @@
 <template>
-  <ul class="v-gouv-fr-accordions-group fr-accordions-group">
+  <div class="v-gouv-fr-accordions-group fr-accordions-group">
     <slot></slot>
-  </ul>
+  </div>
 </template>
 <script>
 import "@gouvfr/dsfr/dist/dsfr.min.css";

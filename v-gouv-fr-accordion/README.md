@@ -11,6 +11,7 @@ accordion Design System État
 
 ### Utilisation
     import {VGouvFrAccordionsGroup, VGouvFrAccordion, VGouvFrAccordionHeader, VGouvFrAccordionContent} from "@vue-gouv-fr/v-gouv-fr-accordion"
+    import "@vue-gouv-fr/v-gouv-fr-accordion/dist/v-gouv-fr-accordion.css"
 
     export default {
         name: 'App',

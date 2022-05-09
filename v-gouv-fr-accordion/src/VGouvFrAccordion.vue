@@ -1,9 +1,7 @@
 <template>
-  <li class="v-gouv-fr-accordion">
-    <section class="fr-accordion">
-      <slot></slot>
-    </section>
-  </li>
+  <section class="v-gouv-fr-accordion fr-accordion">
+    <slot></slot>
+  </section>
 </template>
 <script>
 export default {

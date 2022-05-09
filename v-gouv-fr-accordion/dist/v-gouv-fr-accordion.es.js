@@ -100,7 +100,7 @@ var normalizeComponent_1 = normalizeComponent;
 const __vue_script__ = script;
 
 /* template */
-var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('ul',{staticClass:"v-gouv-fr-accordions-group fr-accordions-group"},[_vm._t("default")],2)};
+var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"v-gouv-fr-accordions-group fr-accordions-group"},[_vm._t("default")],2)};
 var __vue_staticRenderFns__ = [];
 
   /* style */
@@ -133,8 +133,6 @@ var __vue_staticRenderFns__ = [];
 //
 //
 //
-//
-//
 var script$1 = {
   name: "v-gouv-fr-accordion",
   data: function data() {
@@ -149,7 +147,7 @@ var script$1 = {
 const __vue_script__$1 = script$1;
 
 /* template */
-var __vue_render__$1 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('li',{staticClass:"v-gouv-fr-accordion"},[_c('section',{staticClass:"fr-accordion"},[_vm._t("default")],2)])};
+var __vue_render__$1 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',{staticClass:"v-gouv-fr-accordion fr-accordion"},[_vm._t("default")],2)};
 var __vue_staticRenderFns__$1 = [];
 
   /* style */
@@ -238,7 +236,6 @@ var __vue_staticRenderFns__$2 = [];
 //
 //
 //
-//
 var script$3 = {
   name: 'v-gouv-fr-accordion-content',
   props: {},
@@ -250,9 +247,8 @@ var script$3 = {
 
 /* script */
 const __vue_script__$3 = script$3;
-
 /* template */
-var __vue_render__$3 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:"v-gouv-fr-accordion-content fr-collapse"+ (_vm.$parent.expanded ? ' fr-collapse--expanded' : ''),style:(_vm.$parent.expanded ? 'max-height: none;' : 'max-height: 0;')},[_vm._t("default")],2)};
+var __vue_render__$3 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:"v-gouv-fr-accordion-content fr-collapse"+ (_vm.$parent.expanded ? ' fr-collapse--expanded v-gouv-fr-accordion-content--expanded' : '')},[_vm._t("default")],2)};
 var __vue_staticRenderFns__$3 = [];
 
   /* style */
