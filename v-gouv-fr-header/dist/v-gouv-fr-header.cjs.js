@@ -1,7 +1,20 @@
 'use strict';
 
-require('@gouvfr/dsfr/dist/dsfr.min.css');
-require('@gouvfr/dsfr/dist/dsfr.nomodule.min.js');
+require('@gouvfr/dsfr/dist/core/core.min.css');
+require('@gouvfr/dsfr/dist/component/link/link.min.css');
+require('@gouvfr/dsfr/dist/component/logo/logo.min.css');
+require('@gouvfr/dsfr/dist/component/form/form.min.css');
+require('@gouvfr/dsfr/dist/component/button/button.min.css');
+require('@gouvfr/dsfr/dist/component/badge/badge.min.css');
+require('@gouvfr/dsfr/dist/component/navigation/navigation.min.css');
+require('@gouvfr/dsfr/dist/component/modal/modal.min.css');
+require('@gouvfr/dsfr/dist/component/input/input.min.css');
+require('@gouvfr/dsfr/dist/component/search/search.min.css');
+require('@gouvfr/dsfr/dist/component/header/header.min.css');
+require('@gouvfr/dsfr/dist/core/core.nomodule.min.js');
+require('@gouvfr/dsfr/dist/component/navigation/navigation.nomodule.min.js');
+require('@gouvfr/dsfr/dist/component/modal/modal.nomodule.min.js');
+require('@gouvfr/dsfr/dist/component/header/header.nomodule.min.js');
 
 //
 var script = {
